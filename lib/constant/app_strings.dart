@@ -33,7 +33,8 @@ class AppStrings{
   static const String createResumeDesc='We’ll help you to create a resume step-by-step.';
   static const String uploadResume='Upload an existing resume';
   static const String uploadResumeDesc="We’ll help you to create a resume step-by-step.";
-  static const String passDeosNotMatch="Password doesn’t match";
+  static const String passDeosNotMatch="Password doesn’t match"; 
+  static const String profileBasedJobs="Jobs Based on your Profile!";
   
 
 

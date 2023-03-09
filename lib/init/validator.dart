@@ -39,7 +39,7 @@ class InputValidator {
     if (value.isEmpty) {
       return '*Mobile number required!';
     } else if (!regExp.hasMatch(value)) {
-      return '*Please enter valid mobile number!';
+      return '*Invalid mobile number';
     }
     return null;
   }

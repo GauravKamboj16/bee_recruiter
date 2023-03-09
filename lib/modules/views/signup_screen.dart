@@ -28,7 +28,7 @@ class _SignupScreenState extends State<SignupScreen> {
     final locationController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final _controller = Provider.of<SignupController>(context, listen: false);
+    final _controller = Provider.of<SignupController>(context, listen: true);
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
     print("build");
@@ -204,22 +204,32 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      if (_formKey.currentState!.validate()) {
+                      if(_controller.isTnCSelected==true){
+                        if (_formKey.currentState!.validate()) {
                         print("Signup OK");
                       } else {
                         print("invalid");
                       }
+                      }else{
+
+                      }
+                      
                     },
                     child: Container(
                       height: screenHeight / 14,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          gradient: const LinearGradient(
+                          gradient:  LinearGradient(
                               begin: Alignment.centerLeft,
                               end: Alignment.centerRight,
-                              colors: [
+                              colors: _controller.isTnCSelected==true?[
+                                
                                 AppColors.signUpButtonBlue,
                                 AppColors.signUpButtonLBlue
+                              ]:[
+                                
+                                AppColors.greyBorder,
+                                AppColors.greyBorder
                               ])),
                       child: Center(
                         child: Text(

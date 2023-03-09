@@ -82,7 +82,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 ),
                 GestureDetector(
                     onTap: () {
-                      _controller.switchOption();
+                      _controller.switchToSms();
                     },
                     child: resetMethodContainer(
                         _controller.isSmsSelcted == true,
@@ -94,7 +94,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 ),
                 GestureDetector(
                     onTap: () {
-                      _controller.switchOption();
+                      _controller.switchToMail();
                     },
                     child: resetMethodContainer(_controller.isMailSelected,
                         Icons.mail, "Via SMS", "aya********na@gmail.com")),

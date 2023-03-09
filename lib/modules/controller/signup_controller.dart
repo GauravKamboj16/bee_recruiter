@@ -8,6 +8,7 @@ class SignupController with ChangeNotifier{
 //occurs when user click terms and conditions checkbox
 void changeCheckBoxVal(bool value){
   isTnCSelected=value;
+  print(value.toString());
   notifyListeners();
 
 } 

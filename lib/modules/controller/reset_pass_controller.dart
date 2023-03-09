@@ -16,6 +16,16 @@ class ResetPassController with ChangeNotifier{
     }
 
   }
+  showConfirmPass(){
+    if(isConfrimPassVisi==true){
+      isConfrimPassVisi=false;
+      notifyListeners();
+    }else{
+      isConfrimPassVisi=true;
+      notifyListeners();
+    }
+
+  }
 
 
 }

@@ -73,6 +73,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                     height: screenWidth / 36,
                   ),
                   Text(AppStrings.forgotPassDetail,
+                  textAlign: TextAlign.center,
                       style: GoogleFonts.nunito(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
@@ -111,11 +112,11 @@ class _ResetPasswordState extends State<ResetPassword> {
                     icon: Icons.lock_outline,
                     textInputType: TextInputType.text,
                     isTextObscure:
-                        _controller.isPassVisible == true ? false : true,
-                    suffixIcon: _controller.isPassVisible == true
+                        _controller.isConfrimPassVisi == true ? false : true,
+                    suffixIcon: _controller.isConfrimPassVisi == true
                         ? Icons.visibility
                         : Icons.visibility_off,
-                    onTapCallback: () => _controller.showPass(),
+                    onTapCallback: () => _controller.showConfirmPass(),
                     validator: (String? value) {
                       return validator.validateConfirmPassword(
                           value!, passController.text);
